@@ -1,6 +1,4 @@
-#include <unistd.h>
-#include <fcntl.h>
-#include <string.h>
+#include<unistd.h>
 
 /**
  * main - Entry point
@@ -10,15 +8,11 @@
  *
  * Return: This time we return an error 1.
 */
-int main(void) {
-    int fd = open("/dev/stderr", O_WRONLY);
-    if (fd == -1)
-        return 1;
 
-    const char* message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-    write(fd, message, strlen(message));
-    close(fd);
+int main(void)
+{
+	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-    return 1;
+	write(1, quo, 59);
+	return (1);
 }
-
