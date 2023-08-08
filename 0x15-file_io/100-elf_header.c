@@ -27,7 +27,7 @@ void close_elf(int elf);
 void check_elf(unsigned char *e_ident)
 {
 	int index;
-	
+
 	/* Loop through the ELF magic numbers and check if they match*/
 	for (index = 0; index < 4; index++)
 	{
@@ -53,7 +53,6 @@ void print_magic(unsigned char *e_ident)
 	int index;
 
 	printf("  Magic:   ");
-	
 	/* Print the magic nummbers as hexadecimal values*/
 	for (index = 0; index < EI_NIDENT; index++)
 	{
