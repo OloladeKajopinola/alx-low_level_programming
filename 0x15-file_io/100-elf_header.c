@@ -72,6 +72,7 @@ void print_magic(unsigned char *e_ident)
  */
 void print_class(unsigned char *e_ident)
 {
+	/* Print the class of the ELF header based on e_ident[EI_CLASS] */
 	printf("  Class:                             ");
 
 	switch (e_ident[EI_CLASS])
@@ -91,8 +92,8 @@ void print_class(unsigned char *e_ident)
 }
 
 /**
- * print_data - Prints the data of an ELF header.
- * @e_ident: A pointer to an array containing the ELF class.
+ * print_data - Printing the data of an ELF header.
+ * @e_ident:  pointer to an array containing the ELF class.
  */
 void print_data(unsigned char *e_ident)
 {
