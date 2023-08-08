@@ -7,7 +7,8 @@
 #include <unistd.h>
 /* For dynamic memory allocation (e.g., malloc, free) */
 #include <stdlib.h>
-
+#include <sys/types.h>/*For mode_t type*/
+#include <sys/stat.h>/*permission contants such as SIRUSR, SIWUSR*/
 /* Function prototype for read_textfile */
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
